@@ -561,3 +561,220 @@ nav ul li a:hover {
 }
 
 
+/* ============================= */
+/* 📱 MOBILE RESPONSIVE STYLES */
+/* ============================= */
+
+@media (max-width: 1024px) {
+    nav {
+        padding: 15px 30px;
+    }
+
+    .section {
+        padding: 70px 40px;
+    }
+}
+
+/* TABLETS & SMALL LAPTOPS */
+@media (max-width: 900px) {
+
+    /* HERO */
+    .hero {
+        height: auto;
+        padding: 120px 30px 80px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    /* NAV */
+    nav ul li {
+        margin-left: 18px;
+    }
+
+    /* TIMELINE */
+    .timeline {
+        padding: 0 10px;
+    }
+}
+
+/* 📱 MOBILE PHONES */
+@media (max-width: 768px) {
+
+    /* NAVBAR STACK */
+    nav {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 8px 15px 0 0;
+    }
+
+    /* HERO */
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-role {
+        font-size: 18px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn-outline {
+        margin-left: 0;
+    }
+
+    /* SECTIONS */
+    .section {
+        padding: 70px 20px;
+    }
+
+    .section h2 {
+        font-size: 26px;
+    }
+
+    /* SKILLS */
+    .skill-item {
+        min-width: 130px;
+        padding: 10px 14px;
+    }
+
+    /* PROJECTS */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* TIMELINE */
+    .timeline-item {
+        padding: 18px;
+    }
+
+    /* CONTACT */
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* FOOTER */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}
+
+/* 📱 VERY SMALL DEVICES */
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero-role {
+        font-size: 16px;
+    }
+
+    .hero-description {
+        font-size: 13.5px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .skill-item {
+        min-width: 120px;
+        font-size: 12px;
+    }
+}
+/* ============================= */
+/* 🍔 HAMBURGER MENU */
+/* ============================= */
+
+/* ============================= */
+/* 📱 MOBILE NAVBAR – FINAL FIX */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 20px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    /* LOGO LEFT */
+    .logo {
+        font-size: 20px;
+        z-index: 1001;
+    }
+
+    /* SHOW HAMBURGER */
+    .hamburger {
+        display: flex !important;
+        flex-direction: column;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .hamburger span {
+        width: 26px;
+        height: 3px;
+        background: #64ffda;
+        margin: 4px 0;
+        border-radius: 2px;
+    }
+
+    /* HIDE MENU INITIALLY */
+    nav ul {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(10, 25, 47, 0.98);
+        flex-direction: column;
+        align-items: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        padding: 0;
+        z-index: 999;
+    }
+
+    nav ul li {
+        margin: 14px 0;
+    }
+
+    /* OPEN STATE */
+    nav ul.open {
+        max-height: 350px;
+    }
+}
