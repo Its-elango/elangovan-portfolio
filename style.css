@@ -30,10 +30,16 @@ nav {
     backdrop-filter: blur(6px);
 }
 
+/* DESKTOP NAV */
 nav ul {
-    list-style: none;
     display: flex;
+    flex-direction: row;
 }
+
+.hamburger {
+    display: none;
+}
+
 
 nav ul li {
     margin-left: 25px;
@@ -721,15 +727,7 @@ nav ul li a:hover {
 
 @media (max-width: 768px) {
 
-    nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 14px 20px;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
+
 
     /* LOGO LEFT */
     .logo {
@@ -737,12 +735,25 @@ nav ul li a:hover {
         z-index: 1001;
     }
 
-    /* SHOW HAMBURGER */
+   nav ul {
+        display: flex;               /* force immediately */
+        flex-direction: column;      /* no transition glitch */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(10, 25, 47, 0.98);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+    }
+
+    nav ul.open {
+        max-height: 350px;
+    }
+
     .hamburger {
-        display: flex !important;
-        flex-direction: column;
-        cursor: pointer;
-        z-index: 1001;
+        display: flex;
     }
 
     .hamburger span {
