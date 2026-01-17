@@ -26,9 +26,9 @@ const observer = new IntersectionObserver(entries => {
 
 sections.forEach(section => observer.observe(section));
 const roles = [
-  "Software Engineer",
-  ".NET • ASP.NET Core • Angular",
-  "Building Scalable Web Applications"
+    "Software Engineer",
+    ".NET • ASP.NET Core • Angular",
+    "Building Scalable Web Applications"
 ];
 
 let i = 0, j = 0, deleting = false;
@@ -47,6 +47,7 @@ function type() {
 }
 
 document.addEventListener("DOMContentLoaded", type);
+document.getElementById("year").textContent = new Date().getFullYear();
 
 const canvas = document.getElementById("particles");
 const ctx = canvas.getContext("2d");
@@ -63,12 +64,12 @@ const particles = Array.from({ length: 60 }, () => ({
 }));
 
 function animate() {
-    ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = "#64ffda";
 
     particles.forEach(p => {
         ctx.beginPath();
-        ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
         ctx.fill();
         p.x += p.dx;
         p.y += p.dy;
