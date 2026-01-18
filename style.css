@@ -840,12 +840,14 @@ nav {
     color: #64ffda;
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
-
 .text-center {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     margin-top: 20px;
     padding-bottom: 15px;
     gap: 6px;
@@ -858,3 +860,8 @@ nav {
     margin-right: 4px;
 }
 
+@media (max-width: 480px) {
+    .text-center {
+        font-size: 0.8rem;
+    }
+}
