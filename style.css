@@ -933,3 +933,129 @@ nav {
         grid-template-columns: 1fr;
     }
 }
+
+/* TESTIMONIALS */
+.testimonial-marquee {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.testimonial-track {
+    display: flex;
+    gap: 25px;
+    width: max-content;
+    animation: scrollTestimonials 30s linear infinite;
+}
+
+.testimonial-card {
+    min-width: 350px;
+    max-width: 350px;
+    background: #112240;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .testimonial-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 45px rgba(0,0,0,0.45);
+    }
+
+    .testimonial-card p {
+        color: #8892b0;
+        font-size: 14.5px;
+        line-height: 1.8;
+        font-style: italic;
+    }
+
+.testimonial-user {
+    margin-top: 22px;
+}
+
+    .testimonial-user h4 {
+        color: #ccd6f6;
+        font-size: 16px;
+        margin-bottom: 4px;
+    }
+
+    .testimonial-user span {
+        color: #64ffda;
+        font-size: 13px;
+    }
+
+/* Auto Scroll */
+@keyframes scrollTestimonials {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pause animation on hover */
+.testimonial-marquee:hover .testimonial-track {
+    animation-play-state: paused;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .testimonial-card {
+        min-width: 280px;
+        max-width: 280px;
+        padding: 22px;
+    }
+
+    .testimonial-track {
+        gap: 18px;
+    }
+}
+
+.testimonial-user {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    margin-top: 18px;
+}
+
+    .testimonial-user h4 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .testimonial-user span {
+        font-size: 14px;
+        color: #777;
+    }
+
+.linkedin-handle {
+    display: inline-block;
+    color: #ccd6f6;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+    .linkedin-handle:hover {
+        color: #64ffda;
+    }
+
+.designation {
+    display: block;
+    color: #64ffda;
+    font-size: 13px;
+}
+
+.company {
+    display: block;
+    color: #8892b0;
+    font-size: 13px;
+}
