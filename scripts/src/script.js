@@ -3,9 +3,11 @@
 
 document.querySelectorAll('nav a[href^="#"]').forEach(link => {
     link.addEventListener('click', function (e) {
+
         e.preventDefault();
 
-        const targetId = this.getAttribute('href');
+        const targetId = this.getAttribute('href').substring(1);
+
         const targetElement = document.getElementById(targetId);
 
         if (!targetElement) return;
@@ -14,6 +16,7 @@ document.querySelectorAll('nav a[href^="#"]').forEach(link => {
             behavior: 'smooth',
             block: 'start'
         });
+
     });
 });
 
@@ -124,3 +127,43 @@ const navMenu = document.querySelector('nav ul');
 hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('open');
 });
+
+const cards = [
+    document.querySelector('.stack-card1'),
+    document.querySelector('.stack-card2'),
+    document.querySelector('.stack-card3'),
+    document.querySelector('.stack-card4'),
+    document.querySelector('.stack-card5'),
+    document.querySelector('.stack-card6')
+];
+
+const positions = [
+    'stack-card1',
+    'stack-card2',
+    'stack-card3',
+    'stack-card4',
+    'stack-card5',
+    'stack-card6'
+];
+
+setInterval(() => {
+
+    const last = positions.pop();
+    positions.unshift(last);
+
+    cards.forEach((card, index) => {
+
+        card.classList.remove(
+            'stack-card1',
+            'stack-card2',
+            'stack-card3',
+            'stack-card4',
+            'stack-card5',
+            'stack-card6'
+        );
+
+        card.classList.add(positions[index]);
+
+    });
+
+}, 2500);
