@@ -235,7 +235,7 @@ nav {
 /* FOOTER */
 .footer {
     background: #020c1b;
-    padding: 50px 60px 20px;
+    padding: 50px 30px 20px;
 }
 
 .footer-container {
@@ -921,10 +921,133 @@ nav {
     }
 
 /* Image */
-.talk-image img {
-    width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+.talk-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 420px;
+    overflow: hidden;
+}
+
+.stack-card-container {
+    position: relative;
+    width: 650px;
+    height: 340px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stack-card {
+    position: absolute;
+    width: 310px;
+    height: 290px;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s ease;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    background: #111;
+}
+
+    .stack-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background: #111;
+        transition: 0.5s ease;
+    }
+
+/* LEFT SIDE */
+
+.stack-card1 {
+    transform: translateX(-240px) scale(0.75);
+    opacity: 0.4;
+    z-index: 1;
+}
+
+.stack-card2 {
+    transform: translateX(-140px) scale(0.85);
+    opacity: 0.7;
+    z-index: 2;
+}
+
+/* CENTER */
+
+.stack-card3 {
+    transform: translateX(0px) scale(1);
+    z-index: 5;
+}
+
+/* RIGHT SIDE */
+
+.stack-card4 {
+    transform: translateX(140px) scale(0.85);
+    opacity: 0.7;
+    z-index: 2;
+}
+
+.stack-card5 {
+    transform: translateX(240px) scale(0.75);
+    opacity: 0.4;
+    z-index: 1;
+}
+
+/* EXTRA CARD */
+
+.stack-card6 {
+    transform: translateX(0px) scale(0.6);
+    opacity: 0;
+    z-index: 0;
+}
+
+/* HOVER EFFECT */
+
+.stack-card:hover {
+    transform: translateY(-10px) scale(1.03) !important;
+    opacity: 1;
+    z-index: 20;
+}
+
+    .stack-card:hover img {
+        transform: scale(1.03);
+    }
+
+@media(max-width:768px) {
+
+    .stack-card-container {
+        width: 100%;
+        height: 260px;
+    }
+
+    .stack-card {
+        width: 140px;
+        height: 200px;
+    }
+
+    .stack-card1 {
+        transform: translateX(-120px) scale(0.7);
+    }
+
+    .stack-card2 {
+        transform: translateX(-60px) scale(0.85);
+    }
+
+    .stack-card3 {
+        transform: translateX(0px) scale(1);
+    }
+
+    .stack-card4 {
+        transform: translateX(60px) scale(0.85);
+    }
+
+    .stack-card5 {
+        transform: translateX(120px) scale(0.7);
+    }
+
+    .stack-card6 {
+        opacity: 0;
+    }
 }
 
 /* MOBILE */
@@ -932,6 +1055,9 @@ nav {
     .talk-card {
         grid-template-columns: 1fr;
     }
+}
+.stack-card {
+    transition: transform 0.7s ease, opacity 0.7s ease;
 }
 
 /* TESTIMONIALS */
