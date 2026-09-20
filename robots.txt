@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://its-elango.github.io/elangovan-portfolio/sitemap.xml
