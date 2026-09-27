@@ -292,7 +292,7 @@
 
             <div class="timeline-item">
                 <h3>Software Engineer – ClaySys Technologies</h3>
-                <span>Kochi, Kerala, India · Remote | Nov 2023 – July 2025</span>
+                <span>Kochi, Kerala, India · Remote | Nov 2023 – July 2026</span>
 
                 <ul class="experience-points">
                     <li>
@@ -593,6 +593,7 @@
                     <span>ASP.NET Core MVC</span>
                     <span>MySQL</span>
                     <span>Docker</span>
+                    <span>Worker Service</span>
                 </div>
             </div>
 
@@ -609,8 +610,11 @@
                 </div>
                 <div class="project-footer">
                     <span>ASP.NET Core API</span>
+                    <span>Blazor WASM & Server</span>
                     <span>Kafka</span>
                     <span>MinIO</span>
+                    <span>Qdrent</span>
+                    <span>Microservices</span>
                 </div>
             </div>
 
@@ -636,7 +640,7 @@
             <!-- Project Card -->
             <div class="project-card">
                 <div class="project-header">
-                    <h3>Python Voice Biometric SDK</h3>
+                    <h3>Voice Biometric SDK</h3>
                 </div>
                 <div class="project-body">
                     <p>
@@ -647,7 +651,7 @@
                 <div class="project-footer">
                     <span>Python</span>
                     <span>WebSocket</span>
-                    <span>HTTPX</span>
+                    <span>Third Party SDK Integration</span>
                     <span>Voice Biometrics</span>
                 </div>
             </div>
@@ -655,7 +659,7 @@
             <!-- Project Card -->
             <div class="project-card">
                 <div class="project-header">
-                    <h3>BPO Suite MFA</h3>
+                    <h3>MFA API's</h3>
                 </div>
                 <div class="project-body">
                     <p>
@@ -767,15 +771,93 @@
             <span class="name">Elangovan</span> — Build. Scale. Deliver.
         </div>
     </footer>
-    <button id="backToTop"
-            class="back-to-top"
-            data-tooltip="Back to Top"
-            aria-label="Back to Top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+
+    <!-- Portfolio Chatbot -->
+
+    <div class="chatbot-launcher">
+
+        <span class="chatbot-tooltip">
+            Ask Devish
+        </span>
+
+        <span class="chatbot-status-dot"></span>
+
+        <button id="chatbotToggle"
+                class="chatbot-toggle"
+                aria-label="Open Devish portfolio assistant"
+                >
+
+            <i class="fa-solid fa-robot"></i>
+
+        </button>
+
+    </div>
+
+    <div id="chatbotWindow" class="chatbot-window">
+
+        <div class="chatbot-header">
+
+            <div>
+                <strong>Ask Devish </strong>
+                <span>Portfolio Assistant</span>
+            </div>
+
+            <button id="chatbotClose" class="chatbot-close"
+                    aria-label="Close chatbot">
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <div id="chatbotMessages"
+             class="chatbot-messages">
+
+            <div class="chat-message bot">
+                Hi, I'm Devish. I can tell you about Elangovan's skills, projects, experience, and more. What would you like to know?
+            </div>
+
+            <div class="chatbot-suggestions">
+
+                <button data-question="What technologies does Elangovan work with?">
+                    Skills
+                </button>
+
+                <button data-question="Tell me about Elangovan's experience.">
+                    Experience
+                </button>
+
+                <button data-question="What projects has Elangovan worked on?">
+                    Projects
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="chatbot-input-container">
+
+            <input type="text"
+                   id="chatbotInput"
+                   placeholder="Ask me anything..."
+                   autocomplete="off" />
+
+            <button id="chatbotSend"
+                    aria-label="Send message">
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+
     <script src="./scripts/dist/script.min.js"></script>
     <script src="./scripts/dist/skills.min.js"></script>
     <script src="./scripts/dist/testimonials.min.js"></script>
+    <script src="./scripts/dist/chatbot.min.js"></script>
 
 </body>
 
