@@ -45,6 +45,8 @@ const skills = {
     "Monitoring & Tools": [
         "OpenTelemetry",
         "Jaeger",
+        "Prometheus",
+        "Grafana",
         "Git",
         "GitHub",
         "Postman",
