@@ -138,6 +138,11 @@
         <ul>
             <li><a href="#about"><i class="fa-regular fa-user"></i> About</a></li>
             <li>
+                <a href="#education">
+                    <i class="fa-solid fa-graduation-cap"></i> Education
+                </a>
+            </li>
+            <li>
                 <a href="#skills">
                     <i class="fa-solid fa-cogs"></i> Skills
                 </a>
@@ -202,7 +207,7 @@
 
         <div class="about-content">
             <p>
-                I am a <strong>Software Engineer</strong> with <strong>3 years of hands-on experience</strong>
+                I am a <strong>Software Engineer</strong> with <strong>3 + years of hands-on experience</strong>
                 in designing, developing, and deploying scalable web applications
                 using <strong>.NET, ASP.NET Core, MVC, Web API, and Angular</strong>.
             </p>
@@ -245,18 +250,20 @@
 
                 <ul class="experience-points">
                     <li>
-                        Leading the design and development of enterprise-grade applications using
-                        <strong>ASP.NET Core, Blazor, Angular, and Microservices Architecture</strong>.
-                    </li>
-                    <li>
-                        Serving as a technical lead for biometric authentication and
-                        <strong>AI-powered liveness verification solutions</strong>, ensuring secure
-                        and scalable identity verification workflows.
-                    </li>
-                    <li>
                         Architected and implemented containerized deployment platforms using
                         <strong>Docker, Kubernetes (k3s), and Harbor Registry</strong>, improving
                         deployment reliability and scalability.
+                    </li>
+                    <li>
+                        Designed and implemented centralized monitoring and observability using
+                        <strong>Prometheus and Grafana</strong> to monitor application health,
+                        performance, and Linux server hardware metrics across
+                        <strong>production and non-production environments</strong>.
+                    </li>
+                    <li>
+                        Configured <strong>Grafana dashboards and alerting rules</strong> for
+                        CPU, memory, disk utilization, and server health, enabling proactive
+                        issue detection and infrastructure monitoring.
                     </li>
                     <li>
                         Designed and integrated <strong>OpenTelemetry-based observability solutions</strong>
@@ -370,7 +377,36 @@
 
         </div>
     </section>
+    
+    <!-- Education -->
+    <section id="education" class="section light">
+        <h2>
+            <i class="fa-solid fa-graduation-cap"></i>
+            Education
+        </h2>
 
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>Bachelor of Engineering – Computer Science and Engineering</h3>
+                <span>Shree Venkateshwara Hi-Tech Engineering College, Gobi, Tamil Nadu | Anna University | 2019 – 2023 | CGPA: 8.3 / 10</span>
+
+                <ul class="experience-points">
+                    <li>Served as <strong>Vice President – College Technical Symposium</strong>, leading event planning, coordination, and execution.</li>
+
+                    <li>Represented the institution as a <strong>TCS Campus Ambassador</strong>, promoting industry-academia engagement and communication.</li>
+
+                    <li>Actively participated in <strong>technical symposiums, workshops, and technology events</strong>, expanding technical knowledge and industry awareness.</li>
+
+                    <li>Collaborated with <strong>faculty members and student teams</strong> to organize technical events and promote technology awareness.</li>
+
+                    <li>Developed practical programming skills in <strong>C, Python, HTML5, CSS, and MySQL</strong> through academic projects and hands-on learning.</li>
+
+                    <li>Strengthened <strong>leadership, teamwork, communication, event management, and problem-solving skills</strong> through extracurricular activities.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
     <!-- Certifications -->
     <section id="certifications" class="section light">
         <h2>
@@ -496,6 +532,46 @@
                     </div>
                 </div>
             </div>
+
+            <!-- NPTEL Python Certification -->
+            <div class="cert-card">
+                <div class="cert-icon">
+                    <i class="fa-brands fa-python"></i>
+                </div>
+
+                <div class="cert-content">
+                    <h3>The Joy of Computing using Python</h3>
+
+                    <p class="cert-org">
+                        <i class="fa-solid fa-building"></i>
+                        NPTEL – IIT - Ropar
+                    </p>
+
+                    <p>
+                        Instructor: <strong>Prof. Sudarshan Iyengar</strong>
+                    </p>
+
+                    <p>
+                        Gained foundational knowledge of Python programming,
+                        computational thinking, logical reasoning, and problem-solving.
+                    </p>
+
+                    <div class="project-footer">
+                        <span>Python</span>
+                        <span>Programming</span>
+                        <span>Computational Thinking</span>
+                        <span>Problem Solving</span>
+                    </div>
+
+                    <div class="cert-meta">
+                        <span>
+                            <i class="fa-regular fa-calendar"></i>
+                            May 2022
+                        </span>
+                    </div>
+                </div>
+            </div>
+           
         </div>
 
     </section>
@@ -676,7 +752,25 @@
                     <span>MFA</span>
                 </div>
             </div>
-
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Face Embedding Generator</h3>
+                </div>
+                <div class="project-body">
+                    <p>
+                        Developed a Python-based face embedding service using the Buffalo_L model with OpenCV (cv2) for image preprocessing and quality checks.
+                        Containerized and deployed the service on Linux using Docker and Docker Compose.
+                    </p>
+                </div>
+                <div class="project-footer">
+                    <span>Python</span>
+                    <span>Buffalo_L</span>
+                    <span>OpenCV</span>
+                    <span>Docker</span>
+                    <span>Docker Compose</span>
+                    <span>Linux</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -739,7 +833,7 @@
             <div class="footer-about">
                 <h3>Elangovan</h3>
                 <p>
-                    Senior Software Engineer specializing in .NET, ASP.NET Core,
+                    Software Engineer specializing in .NET, ASP.NET Core,
                     Angular & Docker .
                 </p>
             </div>
@@ -747,6 +841,7 @@
             <div class="footer-links">
                 <h4>Quick Links</h4>
                 <a href="#about">About</a>
+                <a href="#education">Education</a>
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
@@ -784,8 +879,7 @@
 
         <button id="chatbotToggle"
                 class="chatbot-toggle"
-                aria-label="Open Devish portfolio assistant"
-                >
+                aria-label="Open Devish portfolio assistant">
 
             <i class="fa-solid fa-robot"></i>
 
